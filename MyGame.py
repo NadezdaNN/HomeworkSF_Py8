@@ -1,31 +1,17 @@
-"""Игра угадай число.
-Компьютер сам загадывает и угадывает число
+"""The program guess the number made by a computer 
+in the minimum count of attempts
 """
 
 import numpy as np
-"""number = np.random.randint(1,101)
-count = 0
-
-while True:
-    count +=1
-    predict_number = int(input("Guess the numbet from 1 to 100"))
-
-    if predict_number > number:
-        print('The number mast be less!')
-    elif predict_number < number:
-        print('The number mast be greater!')
-    else:
-        print(f'You guessed the number! This number = {number}, for {count} attempts')
-        break"""
 
 def random_predict(number:int=1) -> int:
-    """Рандомно угадываем число
+    """Guessing the number
 
     Args:
-        number (int, optional): Загаданное число. Defaults to 1.
+        number (int, optional): the number made by a computer. Defaults to 1.
 
     Returns:
-        int: Число попыток
+        int: number of attempts
     """
     count = 0 
     predict_number = np.random.randint(1,101)
@@ -43,22 +29,20 @@ def random_predict(number:int=1) -> int:
             tmp2=predict_number
             predict_number = int((predict_number+tmp1)/2)
             
-        else:# number == predict_number:
-            #print(count)
+        else:            
             break
         
     return count
 
-#print(f'Number of attempts: {random_predict()}')
-
 def score_game(random_predict) -> int:
-    """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
+    """For how many attempts on average out of 1000 approaches 
+    does our algorithm guess
 
     Args:
-        random_predict (_type_): функция угадывания
+        random_predict (_type_): guessing function
 
     Returns:
-        int: функция угадывания
+        int: average number of attempts
     """
     count_ls = []
     np.random.seed(1)
@@ -67,10 +51,7 @@ def score_game(random_predict) -> int:
         count_ls.append(random_predict(number))
 
     score = int(np.mean(count_ls))
-    print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток')
-    return(score)
+    print(f'This algorithm guesses the number on average for: {score} attempts')
+    return score
 
 score_game(random_predict)
-
-
-# xnj,s dytcnb bpvtytybz
