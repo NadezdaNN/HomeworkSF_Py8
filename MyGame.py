@@ -33,7 +33,7 @@ def random_predict(number:int=1) -> int:
         else:            
             break
 
-        if count > 20:
+        if count > 20: # условие выхода из цикла
             break
         
     return count
