@@ -4,6 +4,7 @@ in the minimum count of attempts
 
 import numpy as np
 
+
 def random_predict(number:int=1) -> int:
     """Guessing the number
 
@@ -34,6 +35,7 @@ def random_predict(number:int=1) -> int:
         
     return count
 
+
 def score_game(random_predict) -> int:
     """For how many attempts on average out of 1000 approaches 
     does our algorithm guess
@@ -54,4 +56,6 @@ def score_game(random_predict) -> int:
     print(f'This algorithm guesses the number on average for: {score} attempts')
     return score
 
-score_game(random_predict)
+
+if __name__ == "__main__":    
+    score_game(random_predict)
