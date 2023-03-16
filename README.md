@@ -10,5 +10,5 @@
 
 ### Инструкция по сборке и запуску проекта
 Выполнить следующие команды в терминале VS Code
-1. git clone https://github.com/NadezdaNN/HomeworkSF.git
+1. git clone https://github.com/NadezdaNN/HomeworkSF_Py8.git
 2. pip install -r requirements.txt
