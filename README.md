@@ -12,3 +12,6 @@
 
 ### Ссылка на большой файл с данными
 https://drive.google.com/file/d/1ghK35pKdDyI1jW9ar7hTCnBqylmmc-oK/view?usp=share_link
+
+Инструкция по сборке и запуску проекта
+pip install -r requirements.txt
